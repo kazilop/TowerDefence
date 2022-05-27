@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 [SelectionBase]
 
@@ -36,18 +35,5 @@ public class WayPoint : MonoBehaviour
         topMeshRenderer.material.color = color;
     }
 
-    private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-            {
-            if (isPlaceable)
-            {
-                FindObjectOfType<TowersScript>().AddTower(this);
-            }
-            else
-            {
-                print("Нельзя строить");
-            }
-        }
-    }
+   
 }
