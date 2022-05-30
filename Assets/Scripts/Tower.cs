@@ -12,6 +12,7 @@ public class Tower : MonoBehaviour
 
     [SerializeField] float shootdistance;
     [SerializeField] ParticleSystem bulletsParticle;
+ //   [SerializeField] ParticleSystem smoke;
 
     private float yCorrection = 3f;
     Transform enemyPos;
@@ -88,7 +89,9 @@ public class Tower : MonoBehaviour
     private void Shoot(bool shoot)
     {
         var emission = bulletsParticle.emission;
+     //   var emissionSmoke = smoke.emission;
         emission.enabled = shoot;
+     //   emissionSmoke.enabled = shoot;
 
     }
 }
