@@ -27,8 +27,6 @@ public class EnemyMovement : MonoBehaviour
         pathFinder = FindObjectOfType<PathFinder>();
         path = pathFinder.GetPath();
         StartCoroutine(EnemyMove());
-        if(path.Count > 2)
-        transform.LookAt(path[1].transform.position);
     }
 
     private void Update()
@@ -39,12 +37,10 @@ public class EnemyMovement : MonoBehaviour
     {
         foreach (WayPoint waypoint in path)
         {
-            
+            transform.LookAt(waypoint.transform);
             targetPosition = waypoint.transform.position;
-            transform.LookAt(targetPosition);
             yield return new WaitForSeconds(speed);
             
-
         }
 
         castle.DamageCastle(damage);
