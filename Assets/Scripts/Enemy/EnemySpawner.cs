@@ -5,7 +5,11 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField][Range(0.1f, 20f)] float spawnInterval;
-    [SerializeField] EnemyMovement enemyPrefab;
+    
+    [SerializeField] EnemyMovement enemy1;
+    [SerializeField] EnemyMovement enemy2;
+
+    private EnemyMovement enemyPrefab;
 
     [SerializeField] AudioClip enemySpawnSoundFX;
 
@@ -21,7 +25,12 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            
+            float variant = Random.Range(0, 10);
+
+            if (variant <= 5)
+                enemyPrefab = enemy1;
+            else
+                enemyPrefab = enemy2;
 
             var newEnemy = Instantiate(enemyPrefab,transform.position, Quaternion.identity);
             newEnemy.transform.parent = transform;
