@@ -1,0 +1,33 @@
+.menubutton {
+    background-color: rgb(42, 140, 180);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 8px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Fascinate-Regular%20SDF%201.asset?fileID=11400000&guid=058412758a0d3ca438e55394ada641d5&type=2#Fascinate-Regular SDF 1');
+    font-size: 20px;
+    width: 380px;
+    height: 40px;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out-bounce;
+    -unity-text-align: middle-center;
+}
+
+.menubutton:hover {
+    visibility: visible;
+    border-left-color: rgb(168, 15, 15);
+    border-right-color: rgb(168, 15, 15);
+    border-top-color: rgb(168, 15, 15);
+    border-bottom-color: rgb(168, 15, 15);
+    background-color: rgb(43, 194, 221);
+    width: 395px;
+    height: 45px;
+}

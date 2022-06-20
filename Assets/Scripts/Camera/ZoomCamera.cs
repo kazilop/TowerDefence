@@ -19,7 +19,7 @@ public class ZoomCamera : MonoBehaviour
             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 
             transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
-
+            
             
         }
     }

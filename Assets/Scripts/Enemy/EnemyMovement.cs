@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float speed;
@@ -26,6 +27,8 @@ public class EnemyMovement : MonoBehaviour
         enemyDamage = GetComponent<EnemyDamage>();
         pathFinder = FindObjectOfType<PathFinder>();
         path = pathFinder.GetPath();
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("Idle");
         StartCoroutine(EnemyMove());
         if (path.Count > 2)
             transform.LookAt(path[1].transform.position);
@@ -42,8 +45,10 @@ public class EnemyMovement : MonoBehaviour
             
             targetPosition = waypoint.transform.position;
             transform.LookAt(waypoint.transform);
+          
             yield return new WaitForSeconds(speed);
-            
+           
+
         }
 
         castle.DamageCastle(damage);

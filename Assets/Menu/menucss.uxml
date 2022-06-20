@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Menu/buttonmenu.uss?fileID=7433441132597879392&amp;guid=79c3620fcc68f4f4f8a704ab581afcde&amp;type=3#buttonmenu" />
+    <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; -unity-text-align: upper-center; align-items: center; justify-content: center; height: 60px; width: 400px;">
+        <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="menuButton" class="menubutton" />
+    </ui:VisualElement>
+</ui:UXML>
